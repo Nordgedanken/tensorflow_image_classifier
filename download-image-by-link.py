@@ -26,10 +26,13 @@ def store_raw_pos_images():
                 with open("road_classifier_data/"+str(pic_num)+".jpg", "wb") as code:
                     code.write(data)
                 pic_num += 1
+                print "no fail"
             except (HTTPError, URLError) as error:
                 fail_url = 0
+                print "fail"
             except timeout:
                 fail_url = 0
+                print "fail"
             
         except Exception as e:
             print str(e)
