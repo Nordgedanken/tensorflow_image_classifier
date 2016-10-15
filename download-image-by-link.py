@@ -9,7 +9,7 @@ from socket import timeout
     
 def store_raw_pos_images():
     pos_images_link = 'http://image-net.org/api/text/imagenet.synset.geturls?wnid=n04096066'   
-    pos_image_urls = urllib2.urlopen(pos_images_link).read().decode()
+    pos_image_urls = urllib2.urlopen(pos_images_link).read()
     pic_num = len([name for name in os.listdir('road_classifier_data') if os.path.isfile(name)])+1
     fail_images = 0
     fail_url = 0
