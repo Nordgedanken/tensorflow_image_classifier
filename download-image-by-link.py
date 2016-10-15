@@ -19,7 +19,7 @@ def store_raw_pos_images():
         
     for i in pos_image_urls.split('\n'):
         try:
-            i
+            print i
             try:
                 f = urllib2.urlopen(i)
                 data = f.read()
