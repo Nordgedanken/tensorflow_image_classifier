@@ -23,7 +23,7 @@ def store_raw_pos_images():
             try:
                 f = urllib2.urlopen(i)
                 data = f.read()
-                with open("road_classifier_data/"+str(pic_num)+".jpg", "wb") as code:
+                with open("road_classifier_data/"+"road_"+str(pic_num)+".jpg", "wb") as code:
                     code.write(data)
                 pic_num += 1
                 print "no fail"
